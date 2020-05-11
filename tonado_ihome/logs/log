@@ -1,0 +1,185 @@
+[I 200507 20:39:29 web:2250] 304 GET /api/house/my (127.0.0.1) 2.99ms
+[E 200507 20:39:33 web:1792] Uncaught exception GET /api/house/info?house_id=27 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8010', method='GET', uri='/api/house/info?house_id=27', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "E:\python\lib\site-packages\tornado\web.py", line 1701, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "E:\python_practice_ku\tndo\tonado_ihome\handlers\House.py", line 211, in get
+        "user_avatar": ret[12]+'.png'
+    TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+[E 200507 20:39:33 web:2250] 500 GET /api/house/info?house_id=27 (127.0.0.1) 3.99ms
+[W 200507 20:39:33 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.00ms
+[D 200507 20:40:34 selector_events:53] Using selector: SelectSelector
+[I 200507 20:40:36 web:2250] 304 GET /api/house/my (127.0.0.1) 4.03ms
+[I 200507 20:40:39 web:2250] 200 GET /api/house/info?house_id=27 (127.0.0.1) 12.63ms
+[I 200507 20:40:39 web:2250] 200 GET /static/images/houseicon_sprite.png (127.0.0.1) 342.72ms
+[W 200507 20:40:39 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.00ms
+[I 200507 20:40:39 web:2250] 304 GET /static/upload/27.png (127.0.0.1) 1.99ms
+[I 200507 20:41:34 web:2250] 304 GET /api/house/my (127.0.0.1) 2.99ms
+[I 200507 20:41:35 web:2250] 304 GET /api/house/area (127.0.0.1) 1.99ms
+[D 200507 20:43:30 House:136] insert into ih_house_facility(hf_house_id,hf_facility_id) values(28, 12),(28, 14),(28, 16)
+[I 200507 20:43:30 web:2250] 200 POST /api/house/info (127.0.0.1) 7.98ms
+[I 200507 20:43:34 web:2250] 200 POST /api/house/image (127.0.0.1) 7.02ms
+[I 200507 20:43:34 web:2250] 200 GET /static/upload/28.png (127.0.0.1) 1.00ms
+[I 200507 20:43:36 web:2250] 200 GET /api/house/my (127.0.0.1) 1.99ms
+[I 200507 20:43:38 web:2250] 200 GET /detail.html?id=28&f=my (127.0.0.1) 2.00ms
+[I 200507 20:43:38 web:2250] 200 GET /api/house/info?house_id=28 (127.0.0.1) 6.02ms
+[I 200507 20:43:38 web:2250] 304 GET /static/upload/28.png (127.0.0.1) 1.00ms
+[W 200507 20:43:38 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.00ms
+[I 200507 20:43:42 web:2250] 304 GET /api/house/my (127.0.0.1) 1.98ms
+[I 200507 20:43:54 web:2250] 200 GET / (127.0.0.1) 2.00ms
+[I 200507 20:43:54 web:2250] 200 GET /static/css/ihome/index.css (127.0.0.1) 2.99ms
+[I 200507 20:43:54 web:2250] 200 GET /static/images/logo@128x59.png (127.0.0.1) 2.99ms
+[I 200507 20:43:54 web:2250] 200 GET /static/js/ihome/index.js (127.0.0.1) 1.99ms
+[I 200507 20:43:54 web:2250] 200 GET /api/house/index (127.0.0.1) 2.99ms
+[I 200507 20:43:54 web:2250] 200 GET /api/check_login (127.0.0.1) 3.99ms
+[W 200507 20:43:54 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 0.00ms
+[I 200507 20:43:56 web:2250] 200 GET /search.html?aid=&aname=&sd=&ed= (127.0.0.1) 2.00ms
+[I 200507 20:43:56 web:2250] 200 GET /static/css/ihome/search.css (127.0.0.1) 3.00ms
+[I 200507 20:43:56 web:2250] 200 GET /static/js/ihome/search.js (127.0.0.1) 1.99ms
+[I 200507 20:43:56 web:2250] 304 GET /api/house/area (127.0.0.1) 1.99ms
+[D 200507 20:43:56 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:43:56 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3
+[E 200507 20:43:56 web:1792] Uncaught exception GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8010', method='GET', uri='/api/house/list?aid=&sd=&ed=&sk=new&p=1', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "E:\python\lib\site-packages\tornado\web.py", line 1701, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "E:\python_practice_ku\tndo\tonado_ihome\handlers\House.py", line 454, in get
+        avatar=l[6]+'.png',
+    TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+[E 200507 20:43:56 web:2250] 500 GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1) 5.04ms
+[I 200507 20:44:08 web:2250] 304 GET /search.html?aid=&aname=&sd=&ed= (127.0.0.1) 1.00ms
+[I 200507 20:44:08 web:2250] 304 GET /api/house/area (127.0.0.1) 1.00ms
+[D 200507 20:44:08 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:44:08 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3
+[E 200507 20:44:08 web:1792] Uncaught exception GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8010', method='GET', uri='/api/house/list?aid=&sd=&ed=&sk=new&p=1', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "E:\python\lib\site-packages\tornado\web.py", line 1701, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "E:\python_practice_ku\tndo\tonado_ihome\handlers\House.py", line 454, in get
+        avatar=l[6]+'.png',
+    TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+[E 200507 20:44:08 web:2250] 500 GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1) 3.05ms
+[I 200507 20:44:08 web:2250] 200 GET /favicon.ico (127.0.0.1) 1.00ms
+[D 200507 20:44:41 selector_events:53] Using selector: SelectSelector
+[I 200507 20:44:43 web:2250] 200 GET /search.html?aid=&aname=&sd=&ed= (127.0.0.1) 335.18ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.99ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 1.99ms
+[I 200507 20:44:44 web:2250] 200 GET /static/css/reset.css (127.0.0.1) 2.99ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css (127.0.0.1) 3.99ms
+[I 200507 20:44:44 web:2250] 200 GET /static/css/ihome/main.css (127.0.0.1) 4.98ms
+[I 200507 20:44:44 web:2250] 200 GET /static/css/ihome/search.css (127.0.0.1) 4.99ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 3.98ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js (127.0.0.1) 3.99ms
+[I 200507 20:44:44 web:2250] 200 GET /static/js/jquery.min.js (127.0.0.1) 1.00ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js (127.0.0.1) 1.00ms
+[I 200507 20:44:44 web:2250] 200 GET /static/js/template.js (127.0.0.1) 1.00ms
+[I 200507 20:44:44 web:2250] 200 GET /static/js/ihome/search.js (127.0.0.1) 2.00ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.99ms
+[I 200507 20:44:44 web:2250] 200 GET /api/house/area (127.0.0.1) 1.99ms
+[D 200507 20:44:44 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:44:44 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3
+[E 200507 20:44:44 web:1792] Uncaught exception GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='127.0.0.1:8010', method='GET', uri='/api/house/list?aid=&sd=&ed=&sk=new&p=1', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "E:\python\lib\site-packages\tornado\web.py", line 1701, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "E:\python_practice_ku\tndo\tonado_ihome\handlers\House.py", line 454, in get
+        avatar=l[6]+'.png' if ret[6] else "",
+    IndexError: tuple index out of range
+[E 200507 20:44:44 web:2250] 500 GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1) 4.99ms
+[I 200507 20:44:44 web:2250] 200 GET /favicon.ico (127.0.0.1) 1.00ms
+[I 200507 20:44:44 web:2250] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 3.99ms
+[D 200507 20:45:04 selector_events:53] Using selector: SelectSelector
+[I 200507 20:45:08 web:2250] 200 GET /search.html?aid=&aname=&sd=&ed= (127.0.0.1) 328.21ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css (127.0.0.1) 2.99ms
+[I 200507 20:45:08 web:2250] 200 GET /static/css/reset.css (127.0.0.1) 3.99ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css (127.0.0.1) 4.98ms
+[I 200507 20:45:08 web:2250] 200 GET /static/css/ihome/main.css (127.0.0.1) 5.98ms
+[I 200507 20:45:08 web:2250] 200 GET /static/css/ihome/search.css (127.0.0.1) 5.98ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/font-awesome/css/font-awesome.min.css (127.0.0.1) 7.98ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/bootstrap/js/bootstrap.min.js (127.0.0.1) 3.99ms
+[I 200507 20:45:08 web:2250] 200 GET /static/js/template.js (127.0.0.1) 5.98ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js (127.0.0.1) 5.98ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js (127.0.0.1) 5.99ms
+[I 200507 20:45:08 web:2250] 200 GET /static/js/jquery.min.js (127.0.0.1) 6.98ms
+[I 200507 20:45:08 web:2250] 200 GET /static/js/ihome/search.js (127.0.0.1) 1.00ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 (127.0.0.1) 1.48ms
+[I 200507 20:45:08 web:2250] 200 GET /api/house/area (127.0.0.1) 1.99ms
+[D 200507 20:45:08 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:45:08 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3
+[I 200507 20:45:08 web:2250] 200 GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1) 2.99ms
+[I 200507 20:45:08 web:2250] 200 GET /favicon.ico (127.0.0.1) 2.00ms
+[I 200507 20:45:08 web:2250] 200 GET /static/upload/28.png (127.0.0.1) 1.00ms
+[I 200507 20:45:08 web:2250] 200 GET /static/upload/87.png (127.0.0.1) 1.99ms
+[I 200507 20:45:08 web:2250] 200 GET /static/upload/26.png (127.0.0.1) 2.99ms
+[I 200507 20:45:08 web:2250] 200 GET /static/upload/27.png (127.0.0.1) 2.99ms
+[I 200507 20:45:08 web:2250] 200 GET /static/plugins/bootstrap/css/bootstrap.min.css.map (127.0.0.1) 5.99ms
+[D 200507 20:45:58 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:45:58 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3,3
+[I 200507 20:45:58 web:2250] 200 GET /api/house/list?aid=&sd=&ed=&sk=new&p=2 (127.0.0.1) 2.99ms
+[I 200507 20:46:07 web:2250] 200 GET /detail.html?id=20 (127.0.0.1) 1.99ms
+[I 200507 20:46:07 web:2250] 200 GET /static/plugins/swiper/css/swiper.min.css (127.0.0.1) 1.99ms
+[I 200507 20:46:07 web:2250] 200 GET /static/css/ihome/detail.css (127.0.0.1) 2.00ms
+[I 200507 20:46:07 web:2250] 200 GET /static/js/ihome/detail1.js (127.0.0.1) 3.00ms
+[I 200507 20:46:07 web:2250] 200 GET /static/plugins/swiper/js/swiper.jquery.min.js (127.0.0.1) 3.99ms
+[I 200507 20:46:07 web:2250] 200 GET /api/house/info?house_id=20 (127.0.0.1) 10.97ms
+[I 200507 20:46:07 web:2250] 200 GET /static/images/houseicon_sprite.png (127.0.0.1) 1.99ms
+[W 200507 20:46:07 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 2.03ms
+[I 200507 20:46:11 web:2250] 200 GET /booking.html?hid=20 (127.0.0.1) 1.99ms
+[I 200507 20:46:11 web:2250] 200 GET /static/css/ihome/booking.css (127.0.0.1) 2.00ms
+[I 200507 20:46:11 web:2250] 200 GET /static/js/ihome/booking.js (127.0.0.1) 1.00ms
+[I 200507 20:46:12 web:2250] 200 GET /api/check_login (127.0.0.1) 1.99ms
+[I 200507 20:46:12 web:2250] 304 GET /api/house/info?house_id=20 (127.0.0.1) 2.99ms
+[I 200507 20:46:15 web:2250] 200 POST /api/order (127.0.0.1) 13.03ms
+[I 200507 20:46:15 web:2250] 200 GET /orders.html (127.0.0.1) 1.00ms
+[I 200507 20:46:15 web:2250] 200 GET /static/css/ihome/orders.css (127.0.0.1) 2.99ms
+[I 200507 20:46:15 web:2250] 200 GET /static/js/ihome/orders.js (127.0.0.1) 1.00ms
+[I 200507 20:46:15 web:2250] 200 GET /api/order/my?role=custom (127.0.0.1) 6.98ms
+[I 200507 20:46:26 web:2250] 200 POST /api/order (127.0.0.1) 13.96ms
+[I 200507 20:46:26 web:2250] 200 GET /api/order/my?role=custom (127.0.0.1) 1.99ms
+[W 200507 20:46:32 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.00ms
+[D 200507 20:46:34 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:46:34 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3
+[I 200507 20:46:34 web:2250] 304 GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1) 2.99ms
+[I 200507 20:46:34 web:2250] 304 GET /static/upload/28.png (127.0.0.1) 1.04ms
+[I 200507 20:46:34 web:2250] 304 GET /static/upload/27.png (127.0.0.1) 1.00ms
+[I 200507 20:46:35 web:2250] 200 GET /detail.html?id=28 (127.0.0.1) 2.00ms
+[I 200507 20:46:35 web:2250] 200 GET /api/house/info?house_id=28 (127.0.0.1) 2.00ms
+[W 200507 20:46:35 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.00ms
+[D 200507 20:46:37 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:46:37 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3
+[I 200507 20:46:37 web:2250] 304 GET /api/house/list?aid=&sd=&ed=&sk=new&p=1 (127.0.0.1) 3.00ms
+[D 200507 20:46:39 House:402] select count(distinct hi_house_id) count from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id
+[D 200507 20:46:39 House:435] select distinct hi_title,hi_house_id,hi_price,hi_room_count,hi_address,hi_order_count,up_avatar,hi_index_image_url,hi_ctime from ih_house_info inner join ih_user_profile on hi_user_id=up_user_id left join ih_order_info on hi_house_id=oi_house_id order by hi_ctime desc limit 3,3
+[I 200507 20:46:39 web:2250] 304 GET /api/house/list?aid=&sd=&ed=&sk=new&p=2 (127.0.0.1) 2.03ms
+[I 200507 20:46:41 web:2250] 200 GET /detail.html?id=26 (127.0.0.1) 1.04ms
+[I 200507 20:46:41 web:2250] 200 GET /api/house/info?house_id=26 (127.0.0.1) 4.99ms
+[W 200507 20:46:41 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.00ms
+[I 200507 20:46:42 web:2250] 200 GET /booking.html?hid=26 (127.0.0.1) 0.96ms
+[I 200507 20:46:42 web:2250] 304 GET /api/check_login (127.0.0.1) 1.00ms
+[I 200507 20:46:42 web:2250] 304 GET /api/house/info?house_id=26 (127.0.0.1) 2.99ms
+[I 200507 20:46:46 web:2250] 200 POST /api/order (127.0.0.1) 12.03ms
+[I 200507 20:46:46 web:2250] 200 GET /api/order/my?role=custom (127.0.0.1) 2.99ms
+[I 200507 20:47:55 web:2250] 200 GET /login.html (127.0.0.1) 2.00ms
+[I 200507 20:47:55 web:2250] 200 GET /static/css/ihome/login.css (127.0.0.1) 1.99ms
+[I 200507 20:47:55 web:2250] 200 GET /static/images/logo@128x59.png (127.0.0.1) 1.00ms
+[I 200507 20:47:55 web:2250] 200 GET /static/js/ihome/login1.js (127.0.0.1) 2.99ms
+[I 200507 20:48:02 web:2250] 200 POST /api/login (127.0.0.1) 2.99ms
+[I 200507 20:48:02 web:2250] 200 GET / (127.0.0.1) 1.00ms
+[I 200507 20:48:02 web:2250] 200 GET /static/css/ihome/index.css (127.0.0.1) 2.00ms
+[I 200507 20:48:02 web:2250] 200 GET /static/js/ihome/index.js (127.0.0.1) 1.99ms
+[I 200507 20:48:02 web:2250] 200 GET /api/check_login (127.0.0.1) 3.00ms
+[I 200507 20:48:02 web:2250] 200 GET /api/house/index (127.0.0.1) 2.99ms
+[W 200507 20:48:02 web:2250] 404 GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map (127.0.0.1) 1.00ms
+[I 200507 20:48:06 web:2250] 200 GET /my.html (127.0.0.1) 1.00ms
+[I 200507 20:48:06 web:2250] 200 GET /static/css/ihome/my.css (127.0.0.1) 1.00ms
+[I 200507 20:48:06 web:2250] 200 GET /static/js/ihome/my1.js (127.0.0.1) 2.00ms
+[I 200507 20:48:06 web:2250] 200 GET /api/profile (127.0.0.1) 3.99ms
+[I 200507 20:48:08 web:2250] 200 GET /lorders.html (127.0.0.1) 1.00ms
+[I 200507 20:48:08 web:2250] 200 GET /static/js/ihome/lorders.js (127.0.0.1) 1.99ms
+[I 200507 20:48:08 web:2250] 200 GET /api/order/my?role=landlord (127.0.0.1) 4.99ms
+[D 200507 21:00:42 selector_events:53] Using selector: SelectSelector
+[D 200507 21:01:51 selector_events:53] Using selector: SelectSelector
